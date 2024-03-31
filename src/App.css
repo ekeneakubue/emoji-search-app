@@ -81,14 +81,7 @@ main{
   align-items: center;  
   justify-content: center;
 }
-.form form > button {
-  width: 5%;
-  padding: 10px 8px;
-  font-size: 20px;
-  border: 0;
-  border-radius: 0px 20px 20px 0px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-}
+
 .form form button:hover {
   background-color: #ffdd67;
 }
@@ -96,7 +89,7 @@ main{
   padding: 9px 20px;
   font-size: inherit;
   border: 3px solid #ffffff00;
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px;
   width: 780px;
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -223,16 +216,13 @@ footer > span{
   .form input[type="text"] {
     padding: 9px 20px;
     width: 100%;
+    border-radius: 20px;
   }
   .form form{
     width: 85%;
   }
-  .form form > button {
-    width: 20%;
-    padding: 10px 8px;
-    font-size: 20px;
-  }
-
+  
+ 
   footer{
     font-size: 12px;
     padding: 1.1rem;

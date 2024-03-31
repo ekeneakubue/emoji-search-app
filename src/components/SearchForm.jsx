@@ -28,9 +28,7 @@ const SearchForm = ({ setValueEmoji, toggleDarkMode, darkMode }) => {
                     placeholder="Type Emoji you want to search..." 
                     onChange={e => setValue(e.target.value)}    
                 />
-                <button className='form-btn'>
-                    <FcSearch  onClick={e => setValue(e.target.value)}/>
-                </button>
+                
                 <div className="all-btn">
                     <button
                         type="button"
