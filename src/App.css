@@ -1,0 +1,242 @@
+
+/* Start Global Style */
+*{
+  box-sizing: border-box;
+}
+
+/* Color Scheme */
+:root{
+  --Background: #c5cde7;
+  --Skyblue: #497df7;
+  --white: #fff;
+}
+
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: var(--Background);
+}
+
+
+/* Start Header Style */
+header{
+  background-color: var(--Skyblue);
+  padding: 2rem;
+  text-align: center;  
+}
+header > h1{
+  font-size: 60px;
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 8px; 
+  margin-top: -0.1rem; 
+}
+header > span{
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color:#c5cde7;
+  margin-top: -2rem;
+  font-family: "Arapey", serif;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* End Header Style */
+
+
+/* Start Main */
+main{
+  min-height: 65vh;
+}
+/* Results componet */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 3%;
+}
+
+
+/* Form component... */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4% 0 4%;
+  position: relative;
+}
+.form form {
+  width: 70%;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+.form form > button {
+  width: 5%;
+  padding: 10px 8px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.form form button:hover {
+  background-color: #ffdd67;
+}
+.form input[type="text"] {
+  padding: 9px 20px;
+  font-size: inherit;
+  border: 3px solid #ffffff00;
+  border-radius: 20px 0px 0px 20px;
+  width: 780px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  position: relative;
+}
+.form input[type="text"]:focus {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  /* border: 3px solid #ffdd67; */
+}
+
+.all-btn > button{
+  width: 100%;
+  font-size: 16px;
+  margin-left: 1rem;
+  padding: 0.5rem ;
+  border-radius: 10px;
+}
+
+
+
+/* Item component */
+.card-emoji {
+  background-color: #fff;
+  width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.card-emoji:hover p.emoji-icon {
+  animation: moveemoji 1.5s infinite;
+}
+
+@keyframes moveemoji {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+.card-emoji p.emoji-icon {
+  font-size: 84px;
+  margin: 0;
+}
+.card-emoji {
+  position: relative;
+}
+p.copied {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  background-color: var(--Skyblue);
+  color: var(--white);
+  padding: 5px;
+  border-radius: 5px;
+}
+p.error {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  bottom: 19px;
+  background-color: #ffdd67;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+/* End Main */
+
+
+/* Start Footer Style */
+footer{
+  text-align: center;
+  background-color: var(--Skyblue);
+  font-size: 16px;
+  padding: 1.1rem;
+  font-weight: 800;
+}
+footer > span{
+  color: var(--white);
+  font-size: 18px;
+}
+/* End Footer Style */
+
+
+
+
+/* Start media querry */
+@media (max-width: 667px){
+  header{
+    padding: 1rem 0.2rem;
+  }
+  header > h1{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0px;
+  }
+  header > span{
+    font-size: 12px;
+    margin-top: 1rem;
+    letter-spacing: 0.2px;
+    font-weight: 800;
+  }
+  .container {
+    margin: auto;
+  }
+  .card-emoji {
+    width: 100%;
+  }
+  .form input[type="text"] {
+    padding: 9px 20px;
+    width: 100%;
+  }
+  .form form{
+    width: 85%;
+  }
+  .form form > button {
+    width: 20%;
+    padding: 10px 8px;
+    font-size: 20px;
+  }
+
+  footer{
+    font-size: 12px;
+    padding: 1.1rem;
+    font-weight: 400;
+  }
+}
+/* End Media Querry */
